@@ -23,6 +23,8 @@ source("Import_GSS_2014_haven.R")
 
 # Methods
 
+I will use information 
+
 <!--Decide on your methods:  use "variable analysis" or other appropriate descriptors.  Make sure to choose at least one graphical method and at least one numerical method.!-->
 
 #Results
@@ -35,6 +37,18 @@ source("Import_GSS_2014_haven.R")
 
 <!--Graphical results here.  Make sure to show your code.  Provide appropriate labels for axes, giving units if possible, and provide a good title for the graph, too.  Use the graphical results to describe the patterns if any that exist in the data as focused toward the research question!-->
 
+```{r}
+source("makeTables.R")
+barchartGC(educ_table,type="percent")
+barchartGC(god_table,type="percent")
+barchartGC(race_table,type="percent")
+barchartGC(sex_table,type="percent")
+barchartGC(polviews_table,type="percent")
+barchartGC(cappun_table,type="percent")
+barchartGC(degree_table,type="percent")
+
+```
+
 ### Numerical Descriptive Results
 
 <!--Numerical results go here. Use the numerical results to describe the patterns if any that exist in the data as focused toward the research question!-->
@@ -43,7 +57,43 @@ source("Import_GSS_2014_haven.R")
 
 <!--State hypothesis clearly.  Make sure your discussion of the inferential test covers all the aspects that the test output produces, such as test statistic, p-value etc.  Make a decision about the null hypothesis, explain the assumptions on which the selected test/procedure was based, and why the chosen procedure satisfys the assumptions and is appropriate to answer the research question!-->
 
+```{r}
+chisqtestGC(educ_table)
+```
+
+```{r}
+chisqtestGC(god_table)
+```
+
+```{r}
+chisqtestGC(race_table)
+```
+
+```{r}
+chisqtestGC(sex_table)
+```
+
+```{r}
+chisqtestGC(polviews_table)
+```
+
+```{r}
+chisqtestGC(cappun_table)
+```
+
+```{r}
+chisqtestGC(degree_table)
+```
 
 # Discussion and Conclusion
 
 <!--Discussion and conclusion here.  If you found a relationship be sure to consider whether the relationship occurs because one of the variables causes the other, or whether they perhasps are related for some other reason.  Watch the chapter 6 videos from the GeorgeTown videos collection.!-->
+After viewing the results graphically, numerically, and running chi-square tests on the data, we can conclude the following:
+
+Race and gun ownership are related. Sex and gun ownership are related. Political views and gun ownership are related. Belief in capital punishment and gun ownership are related. Belief in God and gun ownership are related.
+
+If we were to make a profile of those that voted YES on gun ownership they might be WHITE, MALE, CONSERVATIVE, in FAVOR of capital punishment, and MAYBE believe or ACTUALLY believe in GOD.
+
+If we were to make a profile of those that voted NO on gun ownership they might be BLACK or OTHER, FEMALE, LIBERAL or MODERATE, OPPOSE capital punishment, and DO NOT believe in GOD.
+
+So without taking any other variables into account, there is a relationship between race, sex, political beliefs, beliefs on capital punishment, belief in God and gun ownership. Many participants in these groups voted NO on gun ownership but it seems as though they are influenced by their specific group. It would be interesting to research a generation gap on gun ownership. Would there be a relationship with age and gun ownership? The GSS data has over 3000 different variables which means there are many different factors to compare.
