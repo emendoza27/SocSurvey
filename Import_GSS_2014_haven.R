@@ -17,6 +17,7 @@ n2014<- select(gss,cappun,owngun,bible,polviews,partyid,region,god,race,owngun,e
 #now convert from class "labelled to factor"
 n2014$cappun <- as_factor(n2014$cappun)
 n2014$owngun <- as_factor(n2014$owngun)
+
 n2014$bible <- as_factor(n2014$bible)
 n2014$polviews <- as_factor(n2014$polviews)
 n2014$partyid <- as_factor(n2014$partyid)
