@@ -14,7 +14,7 @@ source("Import_GSS_2014_haven.R")
 <!-- We recommend you use git branches -- create a separate branch for each major section i.e. Introduction, Methods, Results, Inferential Results, and Discussion and Conclusions - leave the YAML block untouched until the final merge where you put in your own name !-->
 
 # Introduction
-Seens 1972, every two years a social survey is conducted to the general public to see how society changes. We will be looking at the data from the 2014 general social survey to find if if there is a relationships between gun ownership and other variables. What is the possible relationships between gun ownership and race, sex, political views, opinions on capitol punishment and belief in god?
+Since 1972, every two years a social survey is conducted to the general public to see how society changes. We will be looking at the data from the 2014 general social survey to find if if there is a relationships between gun ownership and other variables. What is the possible relationships between gun ownership and race, sex, political views, opinions on capitol punishment and belief in god?
 <!--In this section you explain what you are trying to show.  Where did the data come from?  What is the research or other question you are trying to answer?!-->   
 
 ####This study deals with questions about possible relationships between gun ownership and race, sex, political views, opinions on capitol punishment and belief in god. The data is from the 2014 general social survey.
@@ -22,7 +22,7 @@ Seens 1972, every two years a social survey is conducted to the general public t
 
 
 # Methods
-I will look at the data if the following charts. I will be comparing the relationships between gun ownership and race, sex, political views, opinions on capitol punishment and belief in god. The dtata will be compared and I will see both numerical and graphical results. Finaly I will do a chi-sq-test to look at the inferential results.
+I will look at the data if the following charts. I will be comparing the relationships between gun ownership and race, sex, political views, opinions on capitol punishment and belief in god. The data will be compared and I will see both numerical and graphical results. Finally I will do a chi-sq-test to look at the inferential results.
 
 <!--Decide on your methods:  use "variable analysis" or other appropriate descriptors.  Make sure to choose at least one graphical method and at least one numerical method.!-->
 
@@ -39,35 +39,65 @@ I will look at the data if the following charts. I will be comparing the relatio
 ```{r}
 source("makeTables.R")
 ```
-
-#Belief in god vs. Gun ownership
 ```{r}
-barchartGC(god_table,type="percent")
+barchartGC(god_table,type="percent", main = "Belief in god and Gun ownership")
 ```
 
-```{r}
-barchartGC(race_table,type="percent")
-```
+All the groups have a consistent patern. All of the groups had a vote of about 30% "yes" and 70% "no" on gun ownership
 
 ```{r}
-barchartGC(sex_table,type="percent")
+barchartGC(race_table,type="percent", main = "Race and Gun ownership")
 ```
 
-```{r}
-barchartGC(polviews_table,type="percent")
-```
+In all groups there is a larger amount of people that vote "no" on gun ownership. White vote "yes" more often than black or other, but there are still more votes for "no" across the chart.
 
 ```{r}
-barchartGC(cappun_table,type="percent")
+barchartGC(sex_table,type="percent", main = "Sex and Gun ownership")
 ```
+
+In this chart we can see that in both groups the vote for "no" is still dominant. We can also see that more males votes for "yes" than females did.
+
+```{r}
+barchartGC(polviews_table,type="percent", main = "Political views and Gun ownership")
+```
+
+Here we can see that all groups are very difrent. We see a kind of patern the more conservative, the more vote "yes" to gun ownership, the more liberal the less vote "yes".
+
+```{r}
+barchartGC(cappun_table,type="percent", main = "Capitol punishment and Gun ownership")
+```
+
+In this chart we can see that he groups are very diffrent. Although there is more votes on "no" for gunownership, there is a higher amount of "yes" votes in the favor group than in the oppose group.
+
+In all charts we can see that votes for "no" over powers the "yes" vote in gun ownership.
 
 ### Numerical Descriptive Results
 
 <!--Numerical results go here. Use the numerical results to describe the patterns if any that exist in the data as focused toward the research question!-->
+```{r}
+
+```
+
 
 ```{r}
 
 ```
+
+
+```{r}
+
+```
+
+
+```{r}
+
+```
+
+
+```{r}
+
+```
+
 
 # Inferential Results
 
