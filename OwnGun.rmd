@@ -22,7 +22,7 @@ Since 1972, every two years a social survey is conducted to the general public t
 
 
 # Methods
-I will look at the data if the following charts. I will be comparing the relationships between gun ownership and race, sex, political views, opinions on capitol punishment and belief in god. The data will be compared and I will see both numerical and graphical results. Finally I will do a chi-sq-test to look at the inferential results.
+I will look at the data if the following charts. I will be comparing the relationships between gun ownership and race, sex, political views, opinions on capitol punishment and belief in god. The data will be compared and I will see both numerical and graphical results. Finally I will do a chi-square test to look at the inferential results.
 
 <!--Decide on your methods:  use "variable analysis" or other appropriate descriptors.  Make sure to choose at least one graphical method and at least one numerical method.!-->
 
@@ -75,53 +75,69 @@ In all charts we can see that votes for "no" over powers the "yes" vote in gun o
 
 <!--Numerical results go here. Use the numerical results to describe the patterns if any that exist in the data as focused toward the research question!-->
 ```{r}
-
+rowPerc(god_table)
 ```
 
+Looking at the numerical results between Belief in god and gun ownership we can see that all groups answered the same regardless of there belive in god.
 
 ```{r}
-
+rowPerc(race_table)
 ```
 
+Looking at the numerical results between race and gun ownership we can see that 39% of white said "yes" to gun ownership while only 17% of black and 14% of other said "yes".Even though the majority of all groups still say "no"
 
 ```{r}
-
+rowPerc(sex_table)
 ```
 
+Looking at the numerical results between sex and gun ownership we can see that 40% of males said "yes" to gun ownership while only 27% of females said "yes". Even though the majority aswered "no" there are still more male that responded "yes" in the survey.
 
 ```{r}
-
+rowPerc(polviews_table)
 ```
 
+Looking at the numerical results between political view and gun ownership we can see that even though the majority in all groups answered "no" to gun ownership, we can see that the conservatite group has the highest "yes" answers with 42%, folowed by the moderate group with a 33%, last the liberal with only 25% that answered "yes".
 
 ```{r}
-
+rowPerc(cappun_table)
 ```
 
+Looking at the numerical results between favor or oppose in capital punishment and gun ownership we can see that the group in favor with 41% answer "yes". While only 21% of those who oppose answered "yes".
 
 # Inferential Results
 
 <!--State hypothesis clearly.  Make sure your discussion of the inferential test covers all the aspects that the test output produces, such as test statistic, p-value etc.  Make a decision about the null hypothesis, explain the assumptions on which the selected test/procedure was based, and why the chosen procedure satisfys the assumptions and is appropriate to answer the research question!-->
+I will do a chi-square test to look at the inferential results. The chi-square test will tell us with exactetud if all of this veriables have a relationship between each of them individoaly and gun ownership.
 
 ```{r}
 chisqtestGC(god_table)
 ```
 
+
+
 ```{r}
 chisqtestGC(race_table)
 ```
+
+
 
 ```{r}
 chisqtestGC(sex_table)
 ```
 
+
+
 ```{r}
 chisqtestGC(polviews_table)
 ```
 
+
+
 ```{r}
 chisqtestGC(cappun_table)
 ```
+
+
 
 # Discussion and Conclusion
 
