@@ -43,7 +43,7 @@ source("makeTables.R")
 barchartGC(god_table,type="percent", main = "Belief in god and Gun ownership")
 ```
 
-All the groups have a consistent patern. All of the groups had a vote of about 30% "yes" and 70% "no" on gun ownership
+All the groups have a consistent pattern. All of the groups had a vote of about 30% "yes" and 70% "no" on gun ownership
 
 ```{r}
 barchartGC(race_table,type="percent", main = "Race and Gun ownership")
@@ -61,13 +61,13 @@ In this chart we can see that in both groups the vote for "no" is still dominant
 barchartGC(polviews_table,type="percent", main = "Political views and Gun ownership")
 ```
 
-Here we can see that all groups are very difrent. We see a kind of patern the more conservative, the more vote "yes" to gun ownership, the more liberal the less vote "yes".
+Here we can see that all groups are very different. We see a kind of pattern the more conservative, the more vote "yes" to gun ownership, the more liberal the less vote "yes".
 
 ```{r}
 barchartGC(cappun_table,type="percent", main = "Capitol punishment and Gun ownership")
 ```
 
-In this chart we can see that he groups are very diffrent. Although there is more votes on "no" for gunownership, there is a higher amount of "yes" votes in the favor group than in the oppose group.
+In this chart we can see that he groups are very different. Although there is more votes on "no" for gun ownership, there is a higher amount of "yes" votes in the favor group than in the oppose group.
 
 In all charts we can see that votes for "no" over powers the "yes" vote in gun ownership.
 
@@ -78,7 +78,7 @@ In all charts we can see that votes for "no" over powers the "yes" vote in gun o
 rowPerc(god_table)
 ```
 
-Looking at the numerical results between Belief in god and gun ownership we can see that all groups answered the same regardless of there belive in god.
+Looking at the numerical results between Belief in god and gun ownership we can see that all groups answered the same regardless of there believe in god.
 
 ```{r}
 rowPerc(race_table)
@@ -90,13 +90,13 @@ Looking at the numerical results between race and gun ownership we can see that 
 rowPerc(sex_table)
 ```
 
-Looking at the numerical results between sex and gun ownership we can see that 40% of males said "yes" to gun ownership while only 27% of females said "yes". Even though the majority aswered "no" there are still more male that responded "yes" in the survey.
+Looking at the numerical results between sex and gun ownership we can see that 40% of males said "yes" to gun ownership while only 27% of females said "yes". Even though the majority answered "no" there are still more male that responded "yes" in the survey.
 
 ```{r}
 rowPerc(polviews_table)
 ```
 
-Looking at the numerical results between political view and gun ownership we can see that even though the majority in all groups answered "no" to gun ownership, we can see that the conservatite group has the highest "yes" answers with 42%, folowed by the moderate group with a 33%, last the liberal with only 25% that answered "yes".
+Looking at the numerical results between political view and gun ownership we can see that even though the majority in all groups answered "no" to gun ownership, we can see that the conservative group has the highest "yes" answers with 42%, followed by the moderate group with a 33%, last the liberal with only 25% that answered "yes".
 
 ```{r}
 rowPerc(cappun_table)
@@ -107,38 +107,52 @@ Looking at the numerical results between favor or oppose in capital punishment a
 # Inferential Results
 
 <!--State hypothesis clearly.  Make sure your discussion of the inferential test covers all the aspects that the test output produces, such as test statistic, p-value etc.  Make a decision about the null hypothesis, explain the assumptions on which the selected test/procedure was based, and why the chosen procedure satisfys the assumptions and is appropriate to answer the research question!-->
-I will do a chi-square test to look at the inferential results. The chi-square test will tell us with exactetud if all of this veriables have a relationship between each of them individoaly and gun ownership.
+I will do a chi-square test to look at the inferential results. The chi-square test will tell us with exactitude if all of this variables have a relationship between each of them individually and gun ownership.
 
+#####Belief in God and gun ownership
 ```{r}
 chisqtestGC(god_table)
 ```
+H0: Gun ownership is independent of belief in God.
+Ha: Gun ownership and belief in God are not independent.
 
+The P value of 0.97 is very close to the degrees of freedom from the chi-square test which is 2. Therefore, based on the data, we will have to agree with the null hypothesis. The null hypothesis states that there is not a direct relationship between ones belief in God and gun-ownership.
 
-
+#####Race and gun ownership
 ```{r}
 chisqtestGC(race_table)
 ```
+H0: Gun ownership is independent of race.
+Ha: Gun ownership and race are not independent.
 
+Based of the p-value being low at approximately 0, it appears that we have to reject the null hypothesis. The null hypothesis therefore is rejected, and there is a direct relationship between race and gun-ownership.
 
-
+#####Sex andgun ownership
 ```{r}
 chisqtestGC(sex_table)
 ```
+H0: Gun ownership is independent of sex.
+Ha: Sex and Gun ownership are related (not independent).
 
+The P-value is low at approximately 0, therefore, we have to reject the null hypothesis which states there is no direct relationship between gun ownership and sex. However, in this case, we can see there is a direct relationship as females tend to be more opposed to gun ownership then men.
 
-
+#####Political view and gun ownership
 ```{r}
 chisqtestGC(polviews_table)
 ```
+H0: Gun ownership is independent of political views.
+Ha: Gun ownership and political views are related (not independent).
 
+The p-value is at approximately 0 which means that we have to reject the null hypothesis. The null hypothesis predicted that there would be more of the moderate political group that would be in favor of gun ownership. However, that is not the case as they highest YES rate came from the conservative group. Therefore, we would agree that there is a direct relationship between ones political views and gun ownership.
 
-
+#####Capital punishment and gun ownership
 ```{r}
 chisqtestGC(cappun_table)
 ```
+H0: Gun ownership is independent of opinion on capital punishment.
+Ha: Opinion on capital punishment and gun ownership are related (not independent).
 
-
-
+Based on the p-value of 0, it appears that we would have to reject the null hypothesis. The null hypothesis states that there is no direct relationship between ones views on capital punishment and gun ownership. Therefore, we see there is a direct relationship between ones views on capital punishment and gun ownership.
 # Discussion and Conclusion
 
 <!--Discussion and conclusion here.  If you found a relationship be sure to consider whether the relationship occurs because one of the variables causes the other, or whether they perhasps are related for some other reason.  Watch the chapter 6 videos from the GeorgeTown videos collection.!-->
